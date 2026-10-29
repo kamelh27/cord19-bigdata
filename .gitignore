@@ -1,0 +1,6 @@
+data/
+.kaggle/
+kaggle.json
+*.parquet
+cord19_limpio_parquet/
+*.zip

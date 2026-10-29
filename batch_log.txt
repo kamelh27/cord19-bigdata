@@ -1,0 +1,221 @@
+26/10/29 16:34:30 WARN Utils: Your hostname, BIGDATA1 resolves to a loopback address: 127.0.1.1; using 192.168.18.51 instead (on interface enp0s3)
+26/10/29 16:34:30 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/29 16:34:37 INFO SparkContext: Running Spark version 3.5.8
+26/10/29 16:34:37 INFO SparkContext: OS info Linux, 5.15.0-194-generic, amd64
+26/10/29 16:34:37 INFO SparkContext: Java version 11.0.32.1
+26/10/29 16:34:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/29 16:34:38 INFO ResourceUtils: ==============================================================
+26/10/29 16:34:38 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/29 16:34:38 INFO ResourceUtils: ==============================================================
+26/10/29 16:34:38 INFO SparkContext: Submitted application: CORD19_Batch
+26/10/29 16:34:38 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/29 16:34:38 INFO ResourceProfile: Limiting resource is cpu
+26/10/29 16:34:38 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/29 16:34:38 INFO SecurityManager: Changing view acls to: vboxuser
+26/10/29 16:34:38 INFO SecurityManager: Changing modify acls to: vboxuser
+26/10/29 16:34:38 INFO SecurityManager: Changing view acls groups to: 
+26/10/29 16:34:38 INFO SecurityManager: Changing modify acls groups to: 
+26/10/29 16:34:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vboxuser; groups with view permissions: EMPTY; users with modify permissions: vboxuser; groups with modify permissions: EMPTY
+26/10/29 16:34:39 INFO Utils: Successfully started service 'sparkDriver' on port 44065.
+26/10/29 16:34:39 INFO SparkEnv: Registering MapOutputTracker
+26/10/29 16:34:39 INFO SparkEnv: Registering BlockManagerMaster
+26/10/29 16:34:39 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/29 16:34:39 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/29 16:34:39 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/29 16:34:39 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-969a8d35-23f7-4591-975a-a3093e92b0c3
+26/10/29 16:34:39 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/29 16:34:39 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/29 16:34:40 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/29 16:34:40 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/29 16:34:40 INFO Executor: Starting executor ID driver on host 192.168.18.51
+26/10/29 16:34:40 INFO Executor: OS info Linux, 5.15.0-194-generic, amd64
+26/10/29 16:34:40 INFO Executor: Java version 11.0.32.1
+26/10/29 16:34:40 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/29 16:34:40 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@2f1ce425 for default.
+26/10/29 16:34:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41065.
+26/10/29 16:34:40 INFO NettyBlockTransferService: Server created on 192.168.18.51:41065
+26/10/29 16:34:40 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/29 16:34:40 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.18.51, 41065, None)
+26/10/29 16:34:40 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.18.51:41065 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.18.51, 41065, None)
+26/10/29 16:34:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.18.51, 41065, None)
+26/10/29 16:34:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.18.51, 41065, None)
+
+===== ESQUEMA ORIGINAL =====
+root
+ |-- cord_uid: string (nullable = true)
+ |-- sha: string (nullable = true)
+ |-- source_x: string (nullable = true)
+ |-- title: string (nullable = true)
+ |-- doi: string (nullable = true)
+ |-- pmcid: string (nullable = true)
+ |-- pubmed_id: string (nullable = true)
+ |-- license: string (nullable = true)
+ |-- abstract: string (nullable = true)
+ |-- publish_time: string (nullable = true)
+ |-- authors: string (nullable = true)
+ |-- journal: string (nullable = true)
+ |-- mag_id: string (nullable = true)
+ |-- who_covidence_id: string (nullable = true)
+ |-- arxiv_id: string (nullable = true)
+ |-- pdf_json_files: string (nullable = true)
+ |-- pmc_json_files: string (nullable = true)
+ |-- url: string (nullable = true)
+ |-- s2_id: string (nullable = true)
+
+Registros originales: 529431
+Columnas: 19
++--------+----------------------------------------+--------+------------------+------------+
+|cord_uid|                                   title|source_x|           journal|publish_time|
++--------+----------------------------------------+--------+------------------+------------+
+|2b73a28n|    Role of endothelin-1 in lung disease|     PMC|        Respir Res|  2001-02-22|
+|8zchiykl|The 21st International Symposium on I...|     PMC|         Crit Care|  2001-05-02|
+|5tkvsudh|Conservation of polyamine regulation ...|     PMC|            EMBO J|  2000-04-17|
+|tvxpckxo|A Method to Identify p62's UBA Domain...|     PMC|Biol Proced Online|  2003-12-12|
+|eiqypt0m|Herpes simplex virus type 1 and norma...|     PMC|         Crit Care|  2004-03-31|
++--------+----------------------------------------+--------+------------------+------------+
+only showing top 5 rows
+
+
+===== VALORES NULOS =====
++--------+-----+--------+------------+-------+-------+------+--------+
+|cord_uid|title|abstract|publish_time|journal|authors|doi   |source_x|
++--------+-----+--------+------------+-------+-------+------+--------+
+|0       |268  |118052  |950         |43747  |11929  |200190|0       |
++--------+-----+--------+------------+-------+-------+------+--------+
+
+26/10/29 16:36:12 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+
+===== RESUMEN DE LIMPIEZA =====
+Antes: 529431 | Después: 503567 | Eliminados: 25864
+
+===== PUBLICACIONES POR AÑO =====
++----+------+
+|year| count|
++----+------+
+|1990|   170|
+|1991|   143|
+|1992|   153|
+|1993|   149|
+|1994|   142|
+|1995|   160|
+|1996|   169|
+|1997|   171|
+|1998|   216|
+|1999|   210|
+|2000|   298|
+|2001|   314|
+|2002|   535|
+|2003|  1005|
+|2004|  1404|
+|2005|  1406|
+|2006|  1531|
+|2007|  1558|
+|2008|  1833|
+|2009|  2127|
+|2010|  2120|
+|2011|  2384|
+|2012|  2607|
+|2013|  3150|
+|2014|  3477|
+|2015|  3768|
+|2016|  3963|
+|2017|  3773|
+|2018|  3913|
+|2019|  4603|
+|2020|178706|
+|2021|213297|
+|2022| 64112|
++----+------+
+
+
+===== TOP FUENTES =====
+                       source_x   count
+0                           WHO  201636
+1                  Medline; PMC   75540
+2                       Medline   65001
+3                           PMC   39839
+4             Medline; PMC; WHO   32926
+5        Elsevier; Medline; PMC   24283
+6                  Medline; WHO   21896
+7   Elsevier; Medline; PMC; WHO    9993
+8                  MedRxiv; WHO    6911
+9                         ArXiv    6635
+10                Elsevier; PMC    4179
+11           Elsevier; PMC; WHO    3327
+12                     PMC; WHO    3024
+13                      MedRxiv    2374
+14                 BioRxiv; WHO    1869
+
+===== TOP REVISTAS =====
+                            journal  count
+0                          plos one   5215
+1                           biorxiv   4492
+2   int j environ res public health   4106
+3                               bmj   3347
+4                           sci rep   2889
+5                            cureus   2108
+6                          bmj open   2047
+7                  reactions weekly   1933
+8                     front psychol   1769
+9                     front immunol   1693
+10                          viruses   1627
+11              front public health   1611
+12                           nature   1539
+13                   sustainability   1462
+14                           lancet   1418
+
+===== TOP AUTORES =====
+                autor  count
+0          Anonymous,   1558
+1               O039,   1116
+2               D039,    704
+3           Wang, Wei    386
+4   Wiwanitkit, Viroj    361
+5               Ieee,    351
+6          Zhang, Wei    295
+7             Li, Yan    290
+8          Wang, Jing    289
+9           Liu, Yang    282
+10  Mahase, Elisabeth    281
+11            Li, Wei    252
+12          Zhang, Y.    251
+13           Li, Jing    238
+14         Yang, Yang    236
+
+===== ESTADÍSTICAS DEL ABSTRACT =====
++-----------+-----------------+-------+------+
+|con_resumen|promedio_palabras|mediana|maximo|
++-----------+-----------------+-------+------+
+|     394149|            212.0|    207| 18000|
++-----------+-----------------+-------+------+
+
+Con resumen: 394149 | Sin resumen: 109418
+
+===== TOP 25 PALABRAS EN RESÚMENES (RDD) =====
+covid                704710
+patients             458990
+pandemic             258243
+health               246427
+sars                 228874
+disease              200515
+infection            154135
+care                 139266
+risk                 139214
+clinical             138914
+coronavirus          130635
+associated           117673
+time                 117384
+high                 111996
+treatment            111305
+virus                103894
+cases                102889
+severe               101285
+research             99881
+studies              99810
+respiratory          97357
+group                94129
+model                93032
+social               91317
+related              90194
+
+Proceso batch finalizado. Resultados en: /home/vboxuser/cord19/output
